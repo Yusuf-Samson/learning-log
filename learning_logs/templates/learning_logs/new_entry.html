@@ -1,0 +1,15 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Add a New Entry</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="text">Entry:</label>
+            <textarea class="form-control" id="text" name="text" rows="5" placeholder="Enter your entry"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Entry</button>
+    </form>
+</div>
+{% endblock content %}
