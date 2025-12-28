@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-au725#nkj$y%6!afthdl4=0*ag=@rtsj=#v-ajb3=ha!qntxx4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -137,6 +137,7 @@ LOGOUT_REDIRECT_URL = 'learning_logs:index'
 LOGIN_URL = 'accounts:login'
 
 # Platform.sh settings.
+'''
 from platformshconfig import Config
 
 config = Config()
@@ -160,3 +161,4 @@ if config.is_valid_platform():
                 'PORT': db_settings['port'],
             }
         }
+'''
